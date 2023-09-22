@@ -1,9 +1,9 @@
-const botonAnterior : HTMLElement = (document.getElementById("anterior")) as HTMLButtonElement
-const botonReset : HTMLElement = (document.getElementById("reset")) as HTMLButtonElement
-const botonSiguiente : HTMLElement = (document.getElementById("siguiente")) as HTMLButtonElement
-const numeroPrincipal : HTMLElement = (document.getElementById("numeroTurno")) as HTMLButtonElement
+const botonAnterior : HTMLButtonElement = (document.getElementById("anterior")) as HTMLButtonElement
+const botonReset : HTMLButtonElement = (document.getElementById("reset")) as HTMLButtonElement
+const botonSiguiente : HTMLButtonElement = (document.getElementById("siguiente")) as HTMLButtonElement
+const numeroPrincipal : HTMLButtonElement = (document.getElementById("numeroTurno")) as HTMLButtonElement
 const escribirTurno : HTMLInputElement = (document.getElementById("seleccionar-turno")) as HTMLInputElement
-const seleccionarTurno : HTMLElement = (document.getElementById("seleccionar")) as HTMLButtonElement
+const seleccionarTurno : HTMLButtonElement = (document.getElementById("seleccionar")) as HTMLButtonElement
 
 function restarTurno () {
    if (parseInt(numeroPrincipal.innerHTML) > 0)
