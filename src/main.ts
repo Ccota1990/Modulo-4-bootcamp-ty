@@ -12,14 +12,20 @@ function restarTurno () {
    }
 }
 function reset () {
-   numeroPrincipal.innerHTML = "00" ;
+   if (numeroPrincipal !== null && numeroPrincipal !== undefined){
+      numeroPrincipal.innerHTML = "00" ;
+   }
 }
 function sumarTurno () {
-   numeroPrincipal.innerHTML = (parseInt(numeroPrincipal.innerHTML) + 1).toString().padStart(2,"0")   ;
+   if (numeroPrincipal !== null && numeroPrincipal !== undefined){
+      numeroPrincipal.innerHTML = (parseInt(numeroPrincipal.innerHTML) + 1).toString().padStart(2,"0")   ;
+   }
 }
 function seleccionar () {
-   numeroPrincipal.innerHTML = escribirTurno.value.padStart(2,"0") ;
-   escribirTurno.value = ""
+   if (numeroPrincipal !== null && numeroPrincipal !== undefined){
+      numeroPrincipal.innerHTML = escribirTurno.value.padStart(2,"0") ;
+      escribirTurno.value = ""
+   }
 }
 
 
