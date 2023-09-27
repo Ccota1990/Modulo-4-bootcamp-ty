@@ -1,12 +1,12 @@
-const botonAnterior : HTMLButtonElement = (document.getElementById("anterior")) as HTMLButtonElement
-const botonReset : HTMLButtonElement = (document.getElementById("reset")) as HTMLButtonElement
-const botonSiguiente : HTMLButtonElement = (document.getElementById("siguiente")) as HTMLButtonElement
-const numeroPrincipal : HTMLButtonElement = (document.getElementById("numeroTurno")) as HTMLButtonElement
-const escribirTurno : HTMLInputElement = (document.getElementById("seleccionar-turno")) as HTMLInputElement
-const seleccionarTurno : HTMLButtonElement = (document.getElementById("seleccionar")) as HTMLButtonElement
+const botonAnterior  = (document.getElementById("anterior")) 
+const botonReset  = (document.getElementById("reset")) 
+const botonSiguiente  = (document.getElementById("siguiente")) 
+const numeroPrincipal = (document.getElementById("numeroTurno")) 
+const escribirTurno  = (document.getElementById("seleccionar-turno")) 
+const seleccionarTurno  = (document.getElementById("seleccionar")) 
 
 function restarTurno () {
-   if (parseInt(numeroPrincipal.innerHTML) > 0)
+   if (numeroPrincipal !== null && numeroPrincipal !== undefined && parseInt(numeroPrincipal.innerHTML) > 0)
    {
       numeroPrincipal.innerHTML = (parseInt(numeroPrincipal.innerHTML) -1 ).toString().padStart(2,"0")  ;
    }
@@ -22,13 +22,18 @@ function sumarTurno () {
    }
 }
 function seleccionar () {
-   if (numeroPrincipal !== null && numeroPrincipal !== undefined){
+   if (numeroPrincipal !== null && 
+      numeroPrincipal !== undefined && 
+      escribirTurno !== null && 
+      escribirTurno !== undefined && 
+      escribirTurno instanceof HTMLInputElement) 
+      {
       numeroPrincipal.innerHTML = escribirTurno.value.padStart(2,"0") ;
       escribirTurno.value = ""
    }
 }
 
-
+if 
 botonAnterior.addEventListener("click", restarTurno) 
 botonReset.addEventListener("click", reset) 
 botonSiguiente.addEventListener("click", sumarTurno) 
