@@ -33,10 +33,19 @@ function seleccionar () {
    }
 }
 
-if 
-botonAnterior.addEventListener("click", restarTurno) 
-botonReset.addEventListener("click", reset) 
+if (botonAnterior !== null && 
+botonAnterior !== undefined){
+   botonAnterior.addEventListener("click", restarTurno) 
+}
+if (botonReset !== null && 
+botonReset !== undefined) {
+   botonReset.addEventListener("click", reset) 
+}
+if(botonSiguiente !== null && 
+botonSiguiente !== undefined) {
 botonSiguiente.addEventListener("click", sumarTurno) 
-seleccionarTurno.addEventListener("click", seleccionar)
-
-
+}
+if( seleccionarTurno !== null && 
+   seleccionarTurno !== undefined ){
+      seleccionarTurno.addEventListener("click", seleccionar)
+   }
